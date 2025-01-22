@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="images1/logo-removebg-preview.png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explor'EPT</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Explor'EPT</a>
+      <ul>
+        <li><a class="active" href="home.html">Home</a></li>
+        <li><a href="index5.html">Inside</a></li>
+        <li><a href="index2.html">Events</a></li>
+        <li><a href="index1.html">Coworking-Space and Library</a></li>
+        <li><a href="index3.html">Food Service</a></li>
+        <li><a href="index4.html">University Dormitory</a></li>
+        
+      </ul>
+    </header>
+
+    <section>
+      <img src="./images/stars.png" id="stars" alt="stars" />
+      <img src="./images/moon.png" id="moon" alt="moon" />
+      <img src="./images/team-collaboration-for-success-teamwork-or-cooperation-employee-participation-or-organization-partnership-work-together-career-growth-concept-business-people-employee-connect-arrow-jigsaw-pu.jpg" id="mountains_behind" />
+      <h2 id="text">Explor'EPT</h2>
+      <a href="#sec" id="btn" onclick="openOverlay()">Explore</a>
+    
+      <img src="./images/1280px-HD_transparent_picture.png" id="mountains_front" />
+    </section>
+
+    <div class="sec" id="sec">
+      <h2>About the Explor'EPT project</h2>
+      <p>
+        
+The Explor'EPT project is an innovative initiative aimed at improving the orientation of students interested in the Tunisia Polytechnic School of Tunisia. By providing an interactive platform, it allows students to explore the various fields of study and specificities of the institution, thereby assisting them in making informed decisions regarding their academic and professional orientation. By furnishing precise and detailed information about the different available programs, student life, and organized events, Explor'EPT aims to meet students' informational needs and guide them in their orientation journey. The use of a personalized chatbot also enables interactive responses to students' inquiries, providing them with information tailored to their individual needs. By combining accessibility, accuracy, and personalization, the Explor'EPT project represents a valuable resource for students seeking to explore the opportunities offered by the Tunisia Polytechnic School.<br />
+
+      </p>
+    </div>
+    <div id="overlay" class="overlay">
+      <div class="overlay-content">
+        <span class="close-btn" onclick="closeOverlay()">&times;</span>
+        <!-- Contenu de la fenêtre contextuelle -->
+        <h2>Explore with Poly</h2>
+            <iframe src="https://7c02c05b7588803c19.gradio.live/"></iframe>
+            
+      </div>
+    </div>
+    <script>
+      let stars = document.getElementById("stars");
+      let moon = document.getElementById("moon");
+      let mountains_front = document.getElementById("mountains_front");
+      let mountains_behind = document.getElementById("mountains_behind");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+      let header = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+
+        stars.style.left = value * 0.25 + "px";
+        moon.style.top = value * 1.05 + "px";
+
+        mountains_behind.style.top = value * 0.5 + "px";
+        mountains_front.style.top = value * 0 + "px";
+
+        text.style.marginRight = value * 4 + "px";
+        text.style.marginTop = value * 1.5 + "px";
+        btn.style.marginTop = value * 1.5 + "px";
+
+        header.style.top = value * 0.5 + "px";
+      });
+    
+      function openOverlay() {
+        document.getElementById("overlay").style.display = "block";
+      }
+
+      // Fonction pour fermer la fenêtre contextuelle
+      function closeOverlay() {
+        document.getElementById("overlay").style.display = "none";}
+  </script>
+  </body>
+</html>
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explor'EPT</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="https://cabf931656f4b68f66.gradio.live/?fbclid=IwAR3cL3jX_otKz_la6P3_MXhQt7NjqkJq4Qp7gu_FS2Fn0JzVsoIKzs9B6K0" class="logo">Explor'EPT</a>
+      
+    </header>
+
+    <section>
+      <img src="./images/stars.png" id="stars" alt="stars" />
+      <img src="./images/moon.png" id="moon" alt="moon" />
+      <img src="./images/team-collaboration-for-success-teamwork-or-cooperation-employee-participation-or-organization-partnership-work-together-career-growth-concept-business-people-employee-connect-arrow-jigsaw-pu.jpg" id="mountains_behind" />
+      <h2 id="text">Explor'EPT</h2>
+      <a href="https://cabf931656f4b68f66.gradio.live/?fbclid=IwAR3cL3jX_otKz_la6P3_MXhQt7NjqkJq4Qp7gu_FS2Fn0JzVsoIKzs9B6K0" id="btn">Explore</a>
+      <img src="./images/1280px-HD_transparent_picture.png" id="mountains_front" />
+    </section>
+
+    <div class="sec" id="sec">
+      <h2>Explore Tunisia's Polytechnic School</h2>
+      <p>
+        Explor'EPT is a web app that ...
+        <br />
+
+      </p>
+    </div>
+    <script>
+      let stars = document.getElementById("stars");
+      let moon = document.getElementById("moon");
+      let mountains_front = document.getElementById("mountains_front");
+      let mountains_behind = document.getElementById("mountains_behind");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+      let header = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+
+        stars.style.left = value * 0.25 + "px";
+        moon.style.top = value * 1.05 + "px";
+
+        mountains_behind.style.top = value * 0.5 + "px";
+        mountains_front.style.top = value * 0 + "px";
+
+        text.style.marginRight = value * 4 + "px";
+        text.style.marginTop = value * 1.5 + "px";
+        btn.style.marginTop = value * 1.5 + "px";
+
+        header.style.top = value * 0.5 + "px";
+      });
+    </script>
+  </body>
+</html>
