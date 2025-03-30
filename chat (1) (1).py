@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-
-
-
 # /content/info.txt is the  data
 
 !pip install huggingface_hub
